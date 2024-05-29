@@ -1,11 +1,12 @@
 import React from "react";
 import { Text, View } from "react-native";
+import { ScreenWrapper } from "../general/wrappers";
 
 const HomeComponent = () => {
   return (
-    <View>
+    <ScreenWrapper>
       <Text>Home screen</Text>
-    </View>
+    </ScreenWrapper>
   );
 };
 

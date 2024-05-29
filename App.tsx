@@ -1,27 +1,30 @@
 import "react-native-gesture-handler";
 import { NavigationContainer } from "@react-navigation/native";
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
-import { HomeComponent } from "./src/components/screenComponents";
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-
-const Tab = createBottomTabNavigator();
+import { SafeAreaView, StyleSheet } from "react-native";
+import { TabNav } from "./src/screens";
 
 export default function App() {
   return (
-    <NavigationContainer>
-      <Tab.Navigator>
-        <Tab.Screen name="Home" component={HomeComponent} />
-      </Tab.Navigator>
-    </NavigationContainer>
+    <>
+      <SafeAreaView style={styles.container}>
+        <StatusBar style="light" />
+        <NavigationContainer>
+          <TabNav />
+        </NavigationContainer>
+      </SafeAreaView>
+    </>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
+    backgroundColor: "#2c14de",
+    // alignItems: "center",
+    // justifyContent: "center",
+    // paddingBottom: 24,
+    // borderWidth: 2,
+    // borderColor: "red",
   },
 });
