@@ -2,7 +2,11 @@ import "react-native-gesture-handler";
 import { NavigationContainer } from "@react-navigation/native";
 import { StatusBar } from "expo-status-bar";
 import { SafeAreaView, StyleSheet } from "react-native";
+
 import { TabNav } from "./src/screens";
+import { Colors } from "./src/utils/colors";
+
+const { purple600 } = Colors;
 
 export default function App() {
   return (
@@ -20,11 +24,6 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#2c14de",
-    // alignItems: "center",
-    // justifyContent: "center",
-    // paddingBottom: 24,
-    // borderWidth: 2,
-    // borderColor: "red",
+    backgroundColor: purple600,
   },
 });

@@ -2,6 +2,8 @@ import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { FontAwesome5 } from "@expo/vector-icons";
+import { MaterialIcons } from "@expo/vector-icons";
+import { Feather } from "@expo/vector-icons";
 
 import {
   DummyScreenFour,
@@ -9,6 +11,9 @@ import {
   DummyScreenTwo,
   HomeComponent,
 } from "../components/screenComponents";
+import { Colors } from "../utils/colors";
+
+const { purple600 } = Colors;
 
 const Tab = createBottomTabNavigator();
 
@@ -17,9 +22,10 @@ const TabNav = () => {
     <Tab.Navigator
       screenOptions={{
         headerShown: false,
-        tabBarItemStyle: { backgroundColor: "#2c14de" },
-        tabBarStyle: { backgroundColor: "#2c14de", borderTopWidth: 0 },
+        tabBarItemStyle: { backgroundColor: purple600 },
+        tabBarStyle: { backgroundColor: purple600, borderTopWidth: 0 },
         title: "",
+        tabBarActiveTintColor: "#fff",
       }}
     >
       <Tab.Screen
@@ -31,7 +37,7 @@ const TabNav = () => {
               <MaterialCommunityIcons
                 name="home-variant"
                 size={size}
-                color="#fff"
+                color={color}
               />
             );
           },
@@ -43,13 +49,7 @@ const TabNav = () => {
         options={{
           // tabBarLabel: "Home",
           tabBarIcon: ({ color, size }) => {
-            return (
-              <MaterialCommunityIcons
-                name="home-variant"
-                size={size}
-                color="#fff"
-              />
-            );
+            return <Feather name="pie-chart" size={22} color={color} />;
           },
         }}
       />
@@ -60,10 +60,10 @@ const TabNav = () => {
           // tabBarLabel: "Home",
           tabBarIcon: ({ color, size }) => {
             return (
-              <MaterialCommunityIcons
-                name="home-variant"
+              <MaterialIcons
+                name="insert-chart-outlined"
                 size={size}
-                color="#fff"
+                color={color}
               />
             );
           },
@@ -75,7 +75,7 @@ const TabNav = () => {
         options={{
           // tabBarLabel: "Home",
           tabBarIcon: ({ color, size }) => {
-            return <FontAwesome5 name="user" size={size} color={color} />;
+            return <FontAwesome5 name="user" size={18} color={color} />;
           },
         }}
       />

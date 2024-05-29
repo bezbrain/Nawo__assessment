@@ -1,6 +1,10 @@
 import React, { ReactNode } from "react";
 import { StyleSheet, View } from "react-native";
 
+import { Colors } from "../../../utils/colors";
+
+const { purple600 } = Colors;
+
 interface ScreenWrapperProps {
   children: ReactNode;
 }
@@ -13,9 +17,9 @@ export default ScreenWrapper;
 
 const styles = StyleSheet.create({
   screenContainer: {
-    backgroundColor: "#2c14de",
+    backgroundColor: purple600,
     flex: 1,
-    paddingTop: 24,
+    paddingTop: 48,
     paddingHorizontal: 16,
   },
 });
