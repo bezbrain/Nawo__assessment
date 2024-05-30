@@ -39,10 +39,12 @@ const styles = StyleSheet.create({
   accountName: {
     color: "#fff",
     fontSize: 16,
+    fontFamily: "Inter-SemiBold",
   },
   aboutFinance: {
     color: purple100,
     fontSize: 12,
+    fontFamily: "Inter-Regular",
   },
   iconsContainer: {
     flexDirection: "row",

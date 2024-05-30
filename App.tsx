@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { StatusBar } from "expo-status-bar";
 import { SafeAreaView, StyleSheet } from "react-native";
+import * as Font from "expo-font";
 
 import { TabNav } from "./src/screens";
 import { Colors } from "./src/utils/colors";
@@ -10,17 +11,24 @@ import { SplashScreen } from "./src/components/helpers";
 
 const { purple600 } = Colors;
 
-export default function App() {
-  const [isAppLoading, setIsAppLoading] = useState(true);
+const loadFonts = () => {
+  return Font.loadAsync({
+    "Inter-Regular": require("./assets/fonts/Inter-Regular.ttf"),
+    "Inter-Bold": require("./assets/fonts/Inter-Bold.ttf"),
+    "Inter-SemiBold": require("./assets/fonts/Inter-SemiBold.ttf"),
+    "Inter-ExtraBold": require("./assets/fonts/Inter-ExtraBold.ttf"),
+  });
+};
 
-  // DISPLAY SPLASH SCREEN FOR 2 SECONDS TILL APP IS READY
+export default function App() {
+  const [isAppLoading, setIsAppLoading] = useState(false);
+
+  // DISPLAY SPLASH SCREEN UNTIL FONTS ARE LOADED COMPLETELY
   useEffect(() => {
-    setTimeout(() => {
-      setIsAppLoading(false);
-    }, 2000);
+    loadFonts().then(() => setIsAppLoading(true));
   }, []);
 
-  if (isAppLoading) {
+  if (!isAppLoading) {
     return (
       <>
         <StatusBar style="light" />

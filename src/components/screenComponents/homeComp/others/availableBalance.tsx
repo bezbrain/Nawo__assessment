@@ -5,7 +5,7 @@ import { AntDesign } from "@expo/vector-icons";
 import { IconbgWrapper } from "../../../general/wrappers";
 import { Colors } from "../../../../utils/colors";
 
-const { purple100, purple400 } = Colors;
+const { purple100, purple400, white800 } = Colors;
 
 const AvailableBalance = () => {
   return (
@@ -31,23 +31,31 @@ const AvailableBalance = () => {
         <Text style={styles.currentAmount}>N20,983</Text>
 
         <View style={styles.balanceInfoCon}>
-          <Text style={styles.balanceInfo}>
+          <Text style={[styles.balanceInfo, styles.generalText]}>
             By this time last month, you spent slightly higher (N22,719)
           </Text>
         </View>
 
         <View style={styles.latestTransactionsCon}>
-          <View>
-            <Text>Kuda bank</Text>
-            <Text>N12,000.00</Text>
+          <View style={styles.eachTransCon}>
+            <Text style={[styles.generalText, styles.transText]}>
+              Kuda bank
+            </Text>
+            <Text style={[styles.generalText, styles.transText]}>
+              N12,000.00
+            </Text>
           </View>
-          <View>
-            <Text>GT Bank</Text>
-            <Text>N950.00</Text>
+          <View style={styles.eachTransCon}>
+            <Text style={[styles.generalText, styles.transText]}>GT Bank</Text>
+            <Text style={[styles.generalText, styles.transText]}>N950.00</Text>
           </View>
-          <View>
-            <Text>PiggyVest</Text>
-            <Text>N1,050.00</Text>
+          <View style={styles.eachTransCon}>
+            <Text style={[styles.generalText, styles.transText]}>
+              PiggyVest
+            </Text>
+            <Text style={[styles.generalText, styles.transText]}>
+              N1,050.00
+            </Text>
           </View>
         </View>
       </ImageBackground>
@@ -86,31 +94,42 @@ const styles = StyleSheet.create({
     right: 16,
     top: 16,
   },
+  generalText: {
+    fontFamily: "Inter-Regular",
+    color: white800,
+  },
   balanceStatement: {
     color: purple100,
+    fontSize: 11,
     textAlign: "center",
     marginTop: 8,
-    fontSize: 11,
   },
   currentAmount: {
-    color: "#fff",
+    color: white800,
     textAlign: "center",
-    fontWeight: "bold",
     fontSize: 28,
-    fontFamily: "Inter",
+    fontFamily: "Inter-Bold",
   },
   balanceInfoCon: {
     width: 192,
     marginHorizontal: "auto",
   },
   balanceInfo: {
-    color: "#fff",
     textAlign: "center",
     fontSize: 11,
     lineHeight: 18,
   },
 
   latestTransactionsCon: {
-    //
+    marginTop: 24,
+  },
+  eachTransCon: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    marginBottom: 12,
+  },
+  transText: {
+    fontSize: 12,
   },
 });
