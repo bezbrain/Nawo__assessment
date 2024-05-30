@@ -3,7 +3,7 @@ import { Pressable, StyleSheet, Text, View } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { Feather } from "@expo/vector-icons";
 
-import { Colors } from "../utils/colors";
+import { Colors } from "../../../../utils/colors";
 
 const { purple100 } = Colors;
 
