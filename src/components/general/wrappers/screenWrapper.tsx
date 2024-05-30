@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
   screenContainer: {
     backgroundColor: purple600,
     flex: 1,
-    paddingTop: 48,
+    paddingTop: 24,
     paddingBottom: 72,
     paddingHorizontal: 16,
   },
