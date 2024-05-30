@@ -24,7 +24,7 @@ const MyBudget = () => {
         </View>
 
         <View style={styles.budgetFooter}>
-          <Text>😱</Text>
+          <Text style={styles.emoji}>😱</Text>
           <Text style={[styles.generalText, styles.sapaText]}>
             Sapa go soon catch you bros, calm down!!
           </Text>
@@ -76,17 +76,22 @@ const styles = StyleSheet.create({
   line: {
     height: 4,
     width: "100%",
-    backgroundColor: "#32FC65",
+    backgroundColor: "rgba(50, 252, 101, 0.2)",
     marginVertical: 24,
   },
   lineCount: {
-    // height: 4,
+    backgroundColor: "#32FC65",
+    width: "75%",
+    height: "100%",
   },
 
   budgetFooter: {
     flexDirection: "row",
     alignItems: "flex-end",
     gap: 8,
+  },
+  emoji: {
+    color: "rgba(192, 198, 237, 0.6)",
   },
   sapaText: {
     fontSize: 11,
