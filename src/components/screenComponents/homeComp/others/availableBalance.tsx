@@ -4,7 +4,7 @@ import { Image, ImageBackground, StyleSheet, Text, View } from "react-native";
 import { Colors } from "../../../../utils/colors";
 import ArrowRight from "../../../general/arrowRight/arrowRight";
 
-const { purple100, purple400, white800 } = Colors;
+const { purple100, white850, white900 } = Colors;
 
 const AvailableBalance = () => {
   return (
@@ -76,7 +76,7 @@ const styles = StyleSheet.create({
   bgOverlay: {
     borderRadius: 24,
     ...StyleSheet.absoluteFillObject, // This will fill the entire parent view
-    backgroundColor: "rgba(32, 15, 163, 0.7)",
+    backgroundColor: "rgba(32, 15, 163, 0.75)",
   },
   profileImage: {
     backgroundColor: "#bdd6ff",
@@ -87,7 +87,7 @@ const styles = StyleSheet.create({
   },
   generalText: {
     fontFamily: "Inter-Regular",
-    color: white800,
+    color: white850,
   },
   balanceStatement: {
     color: purple100,
@@ -96,7 +96,7 @@ const styles = StyleSheet.create({
     marginTop: 8,
   },
   currentAmount: {
-    color: white800,
+    color: white900,
     textAlign: "center",
     fontSize: 28,
     fontFamily: "Inter-Bold",

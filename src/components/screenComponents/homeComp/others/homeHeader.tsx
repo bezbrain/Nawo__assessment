@@ -1,12 +1,12 @@
 import React from "react";
-import { Pressable, StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { Feather } from "@expo/vector-icons";
 
 import { Colors } from "../../../../utils/colors";
 import { IconbgWrapper } from "../../../general/wrappers";
 
-const { purple100, purple400 } = Colors;
+const { purple100, purple400, white800 } = Colors;
 
 const HomeHeader = () => {
   return (
@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
     fontFamily: "Inter-SemiBold",
   },
   aboutFinance: {
-    color: purple100,
+    color: white800,
     fontSize: 12,
     fontFamily: "Inter-Regular",
   },

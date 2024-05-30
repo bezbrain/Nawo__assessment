@@ -4,7 +4,7 @@ import { StyleSheet, Text, View } from "react-native";
 import { Colors } from "../../../../utils/colors";
 import ArrowRight from "../../../general/arrowRight/arrowRight";
 
-const { white800 } = Colors;
+const { white800, white900 } = Colors;
 
 const MyBudget = () => {
   return (
@@ -67,6 +67,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontFamily: "Inter-Bold",
     marginVertical: 16,
+    color: white900,
   },
   leftOut: {
     fontSize: 12,
@@ -87,7 +88,6 @@ const styles = StyleSheet.create({
 
   budgetFooter: {
     flexDirection: "row",
-    alignItems: "flex-end",
     gap: 8,
   },
   emoji: {
@@ -96,5 +96,6 @@ const styles = StyleSheet.create({
   sapaText: {
     fontSize: 11,
     fontFamily: "Inter-Regular",
+    alignSelf: "flex-end",
   },
 });

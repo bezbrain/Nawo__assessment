@@ -10,7 +10,11 @@ import Transactions from "./others/transactions";
 
 const HomeComponent = () => {
   return (
-    <ScrollView showsVerticalScrollIndicator={false}>
+    <ScrollView
+      showsVerticalScrollIndicator={false}
+      alwaysBounceVertical={false}
+      bounces={false}
+    >
       <ScreenWrapper>
         <HomeHeader />
         <AvailableBalance />
