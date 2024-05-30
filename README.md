@@ -36,3 +36,5 @@ Take the following steps to run the project and explore basic features implement
 5. **Splashscreen:** Introduced splash screen feature and used the provided splash screen in the design.
 
 6. **Accessibility:** The application is accessible on both Android and iOS.
+
+7. **Great attention to details:** Gave attention to every details in the design. Other than strictly following the colors provided by the design, I also strictly followed the typography provided and most importantly used the `Inter` font family as used in the design.
