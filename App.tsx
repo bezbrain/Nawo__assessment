@@ -38,7 +38,9 @@ export default function App() {
     // loadFonts().then(() => setIsAppLoading(true));
     const loadAppResources = async () => {
       await loadResources();
-      setIsAppLoading(false);
+      setTimeout(() => {
+        setIsAppLoading(false);
+      }, 2000);
     };
 
     loadAppResources();
