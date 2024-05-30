@@ -1,9 +1,8 @@
 import React from "react";
 import { Image, ImageBackground, StyleSheet, Text, View } from "react-native";
-import { AntDesign } from "@expo/vector-icons";
 
-import { IconbgWrapper } from "../../../general/wrappers";
 import { Colors } from "../../../../utils/colors";
+import ArrowRight from "../../../general/arrowRight/arrowRight";
 
 const { purple100, purple400, white800 } = Colors;
 
@@ -23,9 +22,7 @@ const AvailableBalance = () => {
           source={require("../../../../../assets/images/profile_image.png")}
           style={styles.profileImage}
         />
-        <IconbgWrapper bgIconStyle={styles.iconCon}>
-          <AntDesign name="right" size={16} color={purple100} />
-        </IconbgWrapper>
+        <ArrowRight size={16} />
 
         <Text style={styles.balanceStatement}>Your available balance is</Text>
         <Text style={styles.currentAmount}>N20,983</Text>
@@ -87,12 +84,6 @@ const styles = StyleSheet.create({
     width: 52,
     borderRadius: 50,
     marginHorizontal: "auto",
-  },
-  iconCon: {
-    backgroundColor: purple400,
-    position: "absolute",
-    right: 16,
-    top: 16,
   },
   generalText: {
     fontFamily: "Inter-Regular",
