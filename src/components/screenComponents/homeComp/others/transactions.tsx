@@ -11,14 +11,20 @@ const recentTransData = [
   {
     id: 1,
     char: "J",
+    recipient: "John Ogaga",
+    transDetails: "Zenith Bank 12:03 AM",
   },
   {
     id: 2,
     char: "H",
+    recipient: "Habib Yogurt",
+    transDetails: "GT-Bank 12:03 AM",
   },
   {
     id: 3,
     char: "H",
+    recipient: "Habib Yogurt",
+    transDetails: "GT-Bank 12:03 AM",
   },
 ];
 
@@ -34,7 +40,7 @@ const Transactions = () => {
         </Text>
 
         {recentTransData.map((each, i) => (
-          <TransactionCard key={i} char={each.char} id={i} />
+          <TransactionCard key={i} {...each} id={i} />
         ))}
       </View>
     </View>

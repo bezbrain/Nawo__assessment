@@ -3,14 +3,21 @@ import { StyleSheet, Text, View } from "react-native";
 
 import { Colors } from "../../../../utils/colors";
 
-const { white800 } = Colors;
+const { white800, white850 } = Colors;
 
 interface TransactionCardProps {
   char: string;
   id: number;
+  recipient: string;
+  transDetails: string;
 }
 
-const TransactionCard = ({ char, id }: TransactionCardProps) => {
+const TransactionCard = ({
+  char,
+  id,
+  transDetails,
+  recipient,
+}: TransactionCardProps) => {
   return (
     <View style={styles.transContainer}>
       <View style={styles.logoCon}>
@@ -19,10 +26,10 @@ const TransactionCard = ({ char, id }: TransactionCardProps) => {
 
       <View>
         <Text style={[styles.generalDetails, styles.recipient]}>
-          John Ogaga
+          {recipient}
         </Text>
         <Text style={[styles.generalDetails, styles.transTime]}>
-          Zenith Bank 12:03 AM
+          {transDetails}
         </Text>
       </View>
       <Text style={[styles.transAmount, id === 0 ? styles.firstAmount : null]}>
@@ -59,6 +66,7 @@ const styles = StyleSheet.create({
   recipient: {
     fontFamily: "Inter-SemiBold",
     fontSize: 14,
+    color: white850,
   },
   transTime: {
     fontFamily: "Inter-Regular",

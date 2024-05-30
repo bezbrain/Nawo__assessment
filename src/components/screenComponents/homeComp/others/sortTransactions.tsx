@@ -53,11 +53,11 @@ const styles = StyleSheet.create({
   },
   orangeDot: {
     position: "absolute",
-    top: -1,
-    right: -1,
+    top: -2,
+    right: -2,
     backgroundColor: "rgba(255, 174, 88, 0.6)",
-    width: 10,
-    height: 10,
+    width: 12,
+    height: 12,
     borderRadius: 5,
   },
   line1: {
