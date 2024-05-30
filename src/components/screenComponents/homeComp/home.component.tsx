@@ -6,6 +6,7 @@ import HomeHeader from "./others/homeHeader";
 import AvailableBalance from "./others/availableBalance";
 import SortTransactions from "./others/sortTransactions";
 import MyBudget from "./others/myBudget";
+import Transactions from "./others/transactions";
 
 const HomeComponent = () => {
   return (
@@ -15,6 +16,7 @@ const HomeComponent = () => {
         <AvailableBalance />
         <SortTransactions />
         <MyBudget />
+        <Transactions />
       </ScreenWrapper>
     </ScrollView>
   );

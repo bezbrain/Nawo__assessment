@@ -6,6 +6,7 @@ import HomeHeader from "./homeComp/others/homeHeader";
 import AvailableBalance from "./homeComp/others/availableBalance";
 import SortTransactions from "./homeComp/others/sortTransactions";
 import MyBudget from "./homeComp/others/myBudget";
+import Transactions from "./homeComp/others/transactions";
 
 export {
   HomeComponent,
@@ -16,4 +17,5 @@ export {
   AvailableBalance,
   SortTransactions,
   MyBudget,
+  Transactions,
 };
