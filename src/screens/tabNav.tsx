@@ -47,7 +47,6 @@ const TabNav = () => {
         name="Two"
         component={DummyScreenTwo}
         options={{
-          // tabBarLabel: "Home",
           tabBarIcon: ({ color, size }) => {
             return <Feather name="pie-chart" size={22} color={color} />;
           },
@@ -57,7 +56,6 @@ const TabNav = () => {
         name="Three"
         component={DummyScreenThree}
         options={{
-          // tabBarLabel: "Home",
           tabBarIcon: ({ color, size }) => {
             return (
               <MaterialIcons
@@ -73,7 +71,6 @@ const TabNav = () => {
         name="Four"
         component={DummyScreenFour}
         options={{
-          // tabBarLabel: "Home",
           tabBarIcon: ({ color, size }) => {
             return <FontAwesome5 name="user" size={18} color={color} />;
           },

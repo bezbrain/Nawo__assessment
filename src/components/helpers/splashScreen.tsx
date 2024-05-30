@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Image, StyleSheet, Text } from "react-native";
+import { View, Image, StyleSheet } from "react-native";
 
 import { Colors } from "../../utils/colors";
 
@@ -47,7 +47,6 @@ const styles = StyleSheet.create({
   },
   overlay: {
     position: "absolute",
-    // borderWidth: 2,
     height: 136,
     width: 136,
     borderRadius: 60,

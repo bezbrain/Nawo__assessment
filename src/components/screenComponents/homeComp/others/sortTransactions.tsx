@@ -5,7 +5,7 @@ import { AntDesign } from "@expo/vector-icons";
 import { Colors } from "../../../../utils/colors";
 import ArrowRight from "../../../general/arrowRight/arrowRight";
 
-const { purple400, purple100, white800 } = Colors;
+const { purple100, white800 } = Colors;
 
 const SortTransactions = () => {
   return (
