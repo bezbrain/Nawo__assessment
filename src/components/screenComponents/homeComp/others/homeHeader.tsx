@@ -4,8 +4,9 @@ import { Ionicons } from "@expo/vector-icons";
 import { Feather } from "@expo/vector-icons";
 
 import { Colors } from "../../../../utils/colors";
+import { IconbgWrapper } from "../../../general/wrappers";
 
-const { purple100 } = Colors;
+const { purple100, purple400 } = Colors;
 
 const HomeHeader = () => {
   return (
@@ -16,12 +17,12 @@ const HomeHeader = () => {
       </View>
 
       <View style={styles.iconsContainer}>
-        <Pressable style={styles.iconsPressables}>
+        <IconbgWrapper bgIconStyle={styles.iconCon}>
           <Ionicons name="notifications-outline" size={18} color={purple100} />
-        </Pressable>
-        <Pressable style={styles.iconsPressables}>
+        </IconbgWrapper>
+        <IconbgWrapper bgIconStyle={styles.iconCon}>
           <Feather name="search" size={18} color={purple100} />
-        </Pressable>
+        </IconbgWrapper>
       </View>
     </View>
   );
@@ -47,12 +48,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     gap: 6,
   },
-  iconsPressables: {
-    backgroundColor: "#2812C9",
-    height: 38,
-    width: 38,
-    borderRadius: 20,
-    justifyContent: "center",
-    alignItems: "center",
+  iconCon: {
+    backgroundColor: purple400,
   },
 });
