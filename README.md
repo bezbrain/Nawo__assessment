@@ -25,3 +25,7 @@ To easily know most features implemented and the programming skills showcased, I
 2. **Modular programming:** I made sure I break component code into small chunks where necessary. With this approach, I was able to easily reuse components.
 
 3. **Folder structure:** Although, it was a small and simple project, I still kept in mind that this could be a big project. Hence, I maintained simple folder structure that can easily be navigated through.
+
+4. **Total responsiveness:** The application is totally responsive on both portrait or landscape orientation.
+
+5. **Splashscreen:** Introduced splash screen feature and used the provided splash screen in the design.

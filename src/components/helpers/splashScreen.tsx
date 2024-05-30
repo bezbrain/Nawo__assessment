@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Image, StyleSheet } from "react-native";
+import { View, Image, StyleSheet, Text } from "react-native";
 
 import { Colors } from "../../utils/colors";
 
@@ -33,6 +33,10 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     backgroundColor: purple600,
+    position: "absolute",
+    zIndex: 9,
+    minHeight: "100%",
+    width: "100%",
   },
   directImageCon: {
     flexDirection: "row",
