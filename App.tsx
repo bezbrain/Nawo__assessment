@@ -4,6 +4,11 @@ import { NavigationContainer } from "@react-navigation/native";
 import { StatusBar } from "expo-status-bar";
 import { SafeAreaView, StyleSheet } from "react-native";
 import * as Font from "expo-font";
+import { AntDesign } from "@expo/vector-icons";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
+import { FontAwesome5 } from "@expo/vector-icons";
+import { MaterialIcons } from "@expo/vector-icons";
+import { Feather } from "@expo/vector-icons";
 
 import { TabNav } from "./src/screens";
 import { Colors } from "./src/utils/colors";
@@ -11,24 +16,35 @@ import { SplashScreen } from "./src/components/helpers";
 
 const { purple600 } = Colors;
 
-const loadFonts = () => {
+const loadResources = () => {
   return Font.loadAsync({
     "Inter-Regular": require("./assets/fonts/Inter-Regular.ttf"),
     "Inter-Bold": require("./assets/fonts/Inter-Bold.ttf"),
     "Inter-SemiBold": require("./assets/fonts/Inter-SemiBold.ttf"),
     "Inter-ExtraBold": require("./assets/fonts/Inter-ExtraBold.ttf"),
+    ...AntDesign.font,
+    ...MaterialCommunityIcons.font,
+    ...FontAwesome5.font,
+    ...MaterialIcons.font,
+    ...Feather.font,
   });
 };
 
 export default function App() {
-  const [isAppLoading, setIsAppLoading] = useState(false);
+  const [isAppLoading, setIsAppLoading] = useState(true);
 
   // DISPLAY SPLASH SCREEN UNTIL FONTS ARE LOADED COMPLETELY
   useEffect(() => {
-    loadFonts().then(() => setIsAppLoading(true));
+    // loadFonts().then(() => setIsAppLoading(true));
+    const loadAppResources = async () => {
+      await loadResources();
+      setIsAppLoading(false);
+    };
+
+    loadAppResources();
   }, []);
 
-  if (!isAppLoading) {
+  if (isAppLoading) {
     return (
       <>
         <StatusBar style="light" />
