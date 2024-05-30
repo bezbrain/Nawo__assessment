@@ -20,6 +20,7 @@ const styles = StyleSheet.create({
     backgroundColor: purple600,
     flex: 1,
     paddingTop: 48,
+    paddingBottom: 72,
     paddingHorizontal: 16,
   },
 });

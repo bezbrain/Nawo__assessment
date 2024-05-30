@@ -5,6 +5,7 @@ import DummyScreenFour from "./dummyScreenFour";
 import HomeHeader from "./homeComp/others/homeHeader";
 import AvailableBalance from "./homeComp/others/availableBalance";
 import SortTransactions from "./homeComp/others/sortTransactions";
+import MyBudget from "./homeComp/others/myBudget";
 
 export {
   HomeComponent,
@@ -14,4 +15,5 @@ export {
   HomeHeader,
   AvailableBalance,
   SortTransactions,
+  MyBudget,
 };

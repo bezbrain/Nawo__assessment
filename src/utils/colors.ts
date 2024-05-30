@@ -3,5 +3,5 @@ export const Colors = {
   purple400: "#2812C9",
   purple100: "#978AF4",
 
-  white800: "#c0c6ed",
+  white800: "rgba(192, 198, 237, 0.8)",
 };
