@@ -10,7 +10,7 @@ const SplashScreen = () => {
     <View style={styles.container}>
       <View style={styles.directImageCon}>
         <View style={styles.image1Container}>
-          <View style={styles.overlay}></View>
+          <View style={styles.overlay} />
           <Image
             source={require("../../../assets/splash1.png")}
             style={styles.image1}
